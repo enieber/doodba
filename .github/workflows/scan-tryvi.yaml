@@ -11,7 +11,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Build an image from Dockerfile
-        run: docker build -t ghcr.io/enieber/doodba:${{ github.sha }} ./16.0.Dockerfile
+        run: docker build -t ghcr.io/enieber/doodba:${{ github.sha }} .
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@0.33.1
         with:
