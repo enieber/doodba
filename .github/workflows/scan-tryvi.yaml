@@ -15,9 +15,9 @@ jobs:
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@0.33.1
         with:
-          image-ref: 'ghcr.io/enieber/doodba:${{ github.sha }}'
-          format: 'table'
-          exit-code: '1'
+          image-ref: "ghcr.io/enieber/doodba:${{ github.sha }}"
+          format: "table"
+          exit-code: "1"
           ignore-unfixed: true
-          vuln-type: 'os,library'
-          severity: 'CRITICAL,HIGH'
+          vuln-type: "os,library"
+          severity: "CRITICAL,HIGH"
